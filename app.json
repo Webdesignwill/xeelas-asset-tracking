@@ -1,0 +1,8 @@
+{
+  "name": "Xeelas",
+  "description": "Xeelas Asset Tracking",
+  "repository": "https://github.com/Webdesignwill/xeelas-asset-tracking",
+  "logo": "",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

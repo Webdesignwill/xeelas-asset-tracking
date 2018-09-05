@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ./partials/header.ejs %>
+</head>
+
+<body>
+  <main role="main" class="d-flex flex-column flex-md-row justify-content-between p-5">
+    <div class="">
+      <h3 class="pb-5">Pages</h3>
+      <% for(let i=0; i < pages.length; i++) { %>
+        <p><a href="<%= `/pages/${pages[i]}` %>"><%= pages[i] %></a></p>
+      <% } %>
+    </div>
+    <div class="">
+      <h3 class="pb-5">Components</h3>
+      <% for(let i=0; i < components.length; i++) { %>
+        <p><a href="<%= `/components/${components[i]}` %>"><%= components[i] %></a></p>
+      <% } %>
+    </div>
+    <div class="">
+      <h3 class="pb-5">Themes</h3>
+      <% for(let i=0; i < themes.length; i++) { %>
+        <p><a href="<%= `/themes/${themes[i]}` %>"><%= themes[i] %></a></p>
+      <% } %>
+    </div>
+    <div class="">
+      <h3 class="pb-5">Configuration</h3>
+      <% for(let i=0; i < configuration.length; i++) { %>
+        <p><a href="<%= `/configuration/${configuration[i]}` %>"><%= configuration[i] %></a></p>
+      <% } %>
+    </div>
+  </main>
+</body>
+</html>

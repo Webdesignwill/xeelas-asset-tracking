@@ -1,0 +1,125 @@
+
+body {
+  &.theme-four {
+
+    .image-row {
+      .image-row-image {
+        a:before {
+          box-shadow: inset 0 0 0 5px map-get($theme-four-colors, 'primary');
+        }
+      }
+    }
+
+    .profile-list {
+      background-color: map-get($theme-four-colors, 'primary');
+      .show-more-link {
+        &:hover {
+          color: map-get($theme-four-colors, 'secondary');
+        }
+      }
+
+      &-image {
+        &:hover {
+          border-color: map-get($theme-four-colors, 'secondary');
+        }
+      }
+    }
+
+    .tags-row {
+      &.function {
+        .badge {
+          &:hover {
+            background-color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+      }
+
+      &.theme {
+        .badge {
+          &:hover {
+            background-color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+      }
+
+      &.project {
+        .badge {
+          &:hover {
+            background-color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+      }
+
+      .badge {
+        &.theme {
+          &:hover {
+            background-color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+
+        &.project {
+          &:hover {
+            background-color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+
+        &.function {
+          &:hover {
+            background-color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+      }
+    }
+
+    .site-footer {
+      background-color: map-get($theme-four-colors, 'primary');
+      .social-icons {
+        a {
+          &:hover {
+            color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+      }
+    }
+
+    .hero-image {
+      background-color: map-get($theme-four-colors, 'primary');
+    }
+
+    .sidebar {
+      .toggle-sidebar {
+        &:hover {
+          .material-icons {
+            color: map-get($theme-four-colors, 'primary');
+          }
+        }
+      }
+      &-links {
+        a {
+          &.active {
+            border-left: 4px solid map-get($theme-four-colors, 'secondary');
+          }
+        }
+      }
+    }
+
+    .navbar {
+      &-toggler, .toggle-sidebar {
+        &:hover {
+          .material-icons {
+            color: map-get($theme-four-colors, 'secondary');
+          }
+        }
+      }
+    }
+
+    a.image-link {
+      img {
+        border: 5px solid map-get($theme-colors, 'white');
+        &:hover {
+          border-color: map-get($theme-four-colors, 'primary');
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "xeelas-asset-tracking",
+  "version": "0.0.0",
+  "description": "Xeelas Asset Tracking",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "node index.js | gulp"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "lodash": "^4.17.10",
+    "npm": "^5.8.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Webdesignwill/xeelas-asset-tracking"
+  },
+  "keywords": []
+}

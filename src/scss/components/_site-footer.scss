@@ -1,0 +1,27 @@
+.site-footer {
+  position: relative;
+  transition: left $transition-speed;
+  left: 0;
+  background-color: map-get($theme-one-colors, 'primary');
+  min-height: 180px;
+
+  .social-icons {
+    a {
+      text-decoration: none;
+      &:hover {
+        color: map-get($theme-one-colors, 'secondary');
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+body {
+  &.sidebar-active {
+    .site-footer {
+      @include media-breakpoint-up(md) {
+        left: $sidebar-width-offset;
+      }
+    }
+  }
+}

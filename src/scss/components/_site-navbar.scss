@@ -1,0 +1,125 @@
+.navbar {
+
+  transition: left $transition-speed;
+  left: 0;
+  position: relative;
+  .toggle-sidebar {
+    transition: width $transition-speed;
+    width: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-container {
+    width: 100%;
+    z-index: $navbar-container-zindex;
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+  }
+
+  &-brand {
+    img {
+      width: 100px;
+      @include media-breakpoint-up(xs) {
+        width: 150px;
+      }
+    }
+  }
+
+  &-toggler {
+    &:focus {
+      outline: none;
+    }
+    .material-icons {
+      color: map-get($theme-colors, 'black');
+    }
+  }
+
+  &-collapse {
+    z-index: $navbar-collapse-zindex;
+    margin-top: $spacing-2;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @include media-breakpoint-up(md) {
+      margin: 0;
+    }
+  }
+
+  &-nav {
+    flex: 1;
+    li {
+      a {
+        transition: background-color $transition-speed;
+        transition: text-indent $transition-speed;
+        text-indent: 0;
+        display: block;
+        text-decoration: none;
+        color: map-get($theme-colors, 'black');
+
+        &:hover, &:focus {
+          background-color: map-get($theme-colors, 'black');
+          color: map-get($theme-colors, 'white');
+          text-indent: 10px;
+        }
+
+        @include media-breakpoint-up(md) {
+          position: relative;
+
+          &:hover, &:focus {
+            background-color: inherit;
+            color: inherit;
+            text-indent: 0;
+          }
+
+          &:after {
+            content: "";
+            transition: width $transition-speed;
+            position: absolute;
+            width: 0;
+            height: 3px;
+            display: block;
+            background-color: $color-black;
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &.active {
+        a {
+          @include media-breakpoint-up(md) {
+            cursor: default;
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.sidebar-active {
+    .navbar {
+      @include media-breakpoint-up(md) {
+        left: $sidebar-width-offset;
+      }
+      .toggle-sidebar {
+        width: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

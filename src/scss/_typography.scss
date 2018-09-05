@@ -1,0 +1,33 @@
+
+@each $header-font in $header-font-size-map {
+  #{nth($header-font, 1)} {
+    font-size: #{nth($header-font, 2)};
+  }
+}
+
+a:link {
+  text-decoration: underline;
+}
+
+a {
+  transition: color $transition-speed;
+  color: map-get($theme-colors, 'black');
+  &.image-link {
+    img {
+      transition: border $transition-speed;
+      border: 5px solid map-get($theme-colors, 'white');
+    }
+  }
+}
+
+a.no-underline, a:link.no-underline {
+  text-decoration: none;
+}
+
+.material-icons {
+  transition: color $transition-speed;
+}
+
+p {
+  font-size: map-get($font-size-map, 'sm');
+}

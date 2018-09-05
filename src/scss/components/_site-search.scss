@@ -1,0 +1,27 @@
+.site-search {
+  z-index: $site-search-zindex;
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: auto;
+  }
+
+  input {
+    min-height: 45px;
+    width: 100%;
+    text-indent: 40px;
+    border-radius: 5px;
+
+    @include media-breakpoint-up(md) {
+      width: 250px;
+      min-height: 35px;
+    }
+
+    &:focus {
+      transition: width $transition-speed;
+      @include media-breakpoint-up(sm) {
+        width: 350px;
+      }
+    }
+  }
+}

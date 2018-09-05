@@ -1,0 +1,53 @@
+
+.sidebar {
+  transition: left $transition-speed;
+  background-color: map-get($theme-colors, 'black');
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  min-width: $sidebar-width;
+  max-width: $sidebar-width;
+  left: -$sidebar-width;
+
+  &.development {
+    left: 0;
+  }
+
+  &-links {
+    a {
+      transition: text-indent $transition-speed;
+      text-indent: 0;
+      text-decoration: none;
+      &:hover {
+        text-indent: 10px;
+      }
+
+      &.active {
+        border-left: 4px solid map-get($theme-colors, 'white');
+        text-indent: 10px;
+      }
+    }
+  }
+
+  .toggle-sidebar {
+    transition: width $transition-speed;
+    width: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: map-get($theme-colors, 'white');
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+body {
+  &.sidebar-active {
+    .sidebar {
+      left: 0;
+    }
+  }
+}
