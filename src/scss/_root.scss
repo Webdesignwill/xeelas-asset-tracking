@@ -1,27 +1,10 @@
 body {
   overflow-x: hidden;
-  font-family: $heroNew;
-  color: map-get($theme-colors, 'dark') !important;
+  font-family: $sans;
 
   .main-container {
     transition: left $transition-speed;
     left: 0;
     position: relative;
   }
-
-  &.sidebar-active {
-    .main-container {
-      @include media-breakpoint-up(md) {
-        left: $sidebar-width-offset;
-      }
-    }
-  }
-}
-
-.icon-njr-logo-vertical {
-  font-size: 130px;
-}
-
-.badge {
-  font-weight: normal;
 }

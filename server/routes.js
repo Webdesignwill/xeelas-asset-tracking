@@ -6,15 +6,11 @@ const viewConfig = require('./viewConfig')
 const {
   pages,
   components,
-  configuration,
-  themes,
 } = viewConfig
 
 routes.get('/', (req, res) => res.render('index', {
   pages,
   components,
-  configuration,
-  themes,
 }))
 
 for(let i = 0; i < pages.length; i++) {

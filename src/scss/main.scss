@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
@@ -18,10 +18,7 @@
 @import './config';
 @import './typography';
 @import './root';
-@import './mixins';
-@import './spectrum';
 
 @import './components/index';
 @import './forms/index';
 @import './utilities/index';
-@import './themes/index';

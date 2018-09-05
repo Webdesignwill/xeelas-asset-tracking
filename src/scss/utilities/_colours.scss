@@ -1,4 +1,3 @@
-
 @each $key, $color in $theme-colors {
   .color-#{$key} {
     color: $color !important;
@@ -7,49 +6,4 @@
   .bg-color-#{$key} {
     background-color: $color !important;
   }
-}
-
-@each $key, $color in $theme-one-colors {
-  .color-theme-one-#{$key} {
-    color: $color !important;
-  }
-
-  .bg-color-theme-one-#{$key} {
-    background-color: $color !important;
-  }
-}
-
-@each $key, $color in $theme-two-colors {
-  .color-theme-two-#{$key} {
-    color: $color !important;
-  }
-
-  .bg-color-theme-two-#{$key} {
-    background-color: $color !important;
-  }
-}
-
-@each $key, $color in $theme-three-colors {
-  .color-theme-three-#{$key} {
-    color: $color !important;
-  }
-
-  .bg-color-theme-three-#{$key} {
-    background-color: $color !important;
-  }
-}
-
-@each $key, $color in $theme-four-colors {
-  .color-theme-four-#{$key} {
-    color: $color !important;
-  }
-
-  .bg-color-theme-four-#{$key} {
-    background-color: $color !important;
-  }
-}
-
-.demo-color {
-  width: 200px;
-  height: 200px;
 }

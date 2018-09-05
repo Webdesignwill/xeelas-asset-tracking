@@ -1,6 +1,4 @@
-$heroNew: 'Hero New', Arial, Helvetica, sans-serif;
-$heroNewHairline: 'Hero New Hairline', Arial, Helvetica, sans-serif;
-$heroNewSuper: 'Hero New Super', Arial, Helvetica, sans-serif;
+$sans: 'Source Sans Pro', sans-serif;
 
 $spacing-1: 0.25rem;
 $spacing-2: 0.5rem;
@@ -37,58 +35,35 @@ $header-font-size-map: (
 );
 
 $color-black: rgb(0,0,0) !default; // #000000
-$color-dark: rgb(15,15,15) !default; // #010101
 $color-white: rgb(255,255,255) !default; // #FFFFFF
-$color-light: rgb(120,120,120) !default; // #787878
-$color-lighter: rgb(182,182,182) !default; // #B6B6B6
-$color-shadow: rgba(0,0,0,.6) !default;
-$color-link: rgb(0,86,179) !default; // #0056B3
+$color-scarlet: rgb(208,1,27) !default; // #d0011b
+$color-apple-green: rgb(126,211,33) !default; // #7ed321
+$color-canary-yellow: rgb(254,231,64) !default; // #fee740
+$color-warm-grey: rgb(155,155,155) !default; // #9b9b9b
+$color-cool-grey: rgb(140,151,164) !default; // #8c97a4
+$color-slate: rgb(72,84,101) !default; // #485465
+$color-slate-20: rgba(72,84,101,.2) !default; // #485465
+$color-slate-50: rgba(72,84,101,.5) !default; // #485465
+$color-cloudy-blue: rgb(187,201,221) !default; // #bbc9dd
+$color-dark-grey-blue: rgb(50,68,94) !default; // #32445e
 
-$darkenerPercentile: 38%;
 $transition-speed: .2s;
 $sidebar-width: 230px;
 $sidebar-width-offset: #{$sidebar-width};
 
-$theme-one-primary: rgb(198,252,242) !default; // #C6FCF2
-$theme-one-secondary: darken($theme-one-primary, $darkenerPercentile);
-
-$theme-one-colors: (
-  "primary": $theme-one-primary,
-  "secondary": $theme-one-secondary,
-);
-
-$theme-two-primary: rgb(255,206,152) !default; // #FFCE98
-$theme-two-secondary: darken($theme-two-primary, $darkenerPercentile);
-
-$theme-two-colors: (
-  "primary": $theme-two-primary,
-  "secondary": $theme-two-secondary,
-);
-
-$theme-three-primary: rgb(154,196,237) !default; // #9AC4ED
-$theme-three-secondary: darken($theme-three-primary, $darkenerPercentile);
-
-$theme-three-colors: (
-  "primary": $theme-three-primary,
-  "secondary": $theme-three-secondary,
-);
-
-$theme-four-primary: rgb(255,222,222) !default; // #FFDEDE
-$theme-four-secondary: darken($theme-four-primary, $darkenerPercentile);
-
-$theme-four-colors: (
-  "primary": $theme-four-primary,
-  "secondary": $theme-four-secondary,
-);
-
 $theme-colors: (
   "black": $color-black,
   "white": $color-white,
-  "light": $color-light,
-  "lighter": $color-lighter,
-  "dark": $color-dark,
-  "shadow": $color-shadow,
-  "link": $color-link,
+  "scarlet": $color-scarlet,
+  "apple-green": $color-apple-green,
+  "canary-yellow": $color-canary-yellow,
+  "warm-grey": $color-warm-grey,
+  "cool-grey": $color-cool-grey,
+  "slate": $color-slate,
+  "slate-20": $color-slate-20,
+  "slate-50": $color-slate-50,
+  "cloudy-blue": $color-cloudy-blue,
+  "dark-grey-blue": $color-dark-grey-blue,
 );
 
 $grid-breakpoints: (
