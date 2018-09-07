@@ -1,0 +1,78 @@
+$mapAssetLabelSize: 80px;
+$mapAssetLabelPointerSize: 15px;
+$mapAssetLabelPointerZindex: 2000;
+$mapAssetLabelProgressZindex: 2010;
+
+@keyframes glowing {
+  0% {
+    background-color: map-get($theme-colors, 'tomato');
+  }
+  50% {
+    background-color: darken(map-get($theme-colors, 'tomato'), 20%);
+  }
+  100% {
+    background-color: map-get($theme-colors, 'tomato');
+  }
+}
+
+.map-asset-label {
+  position: relative;
+  background-color: map-get($theme-colors, 'slate');
+  border-radius: $border-radius;
+  height: $mapAssetLabelSize;
+  width: $mapAssetLabelSize;
+  box-shadow: 1px 1px 10px map-get($theme-colors, 'slate-50');
+  color: map-get($theme-colors, 'white');
+
+  .progress {
+    position: relative;
+    padding: 2px;
+    background-color: map-get($theme-colors, 'dark-grey');
+    z-index: $mapAssetLabelProgressZindex;
+    height: .7rem;
+    border-radius: $border-radius;
+    &-bar {
+      background-color: map-get($theme-colors, 'aqua-marine');
+      border-radius: $border-radius;
+    }
+  }
+
+  hr {
+    border-color: map-get($theme-colors, 'cool-grey');
+  }
+
+  &:after {
+    content: '';
+    z-index: $mapAssetLabelPointerZindex;
+    background-color: map-get($theme-colors, 'slate');
+    bottom: calc(#{-$mapAssetLabelPointerSize} / 2);
+    height: $mapAssetLabelPointerSize;
+    width: $mapAssetLabelPointerSize;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    left: 50%;
+  }
+}
+
+.map-asset-label {
+
+  &.warning {
+    .progress {
+      .progress-bar {
+        background-color: map-get($theme-colors, 'squash');
+      }
+    }
+  }
+
+  &.danger {
+    color: map-get($theme-colors, 'tomato');
+    .progress {
+      border: 1px solid map-get($theme-colors, 'tomato');
+      background-color: map-get($theme-colors, 'white');
+      .progress-bar {
+        animation: glowing 2000ms infinite;
+        background-color: map-get($theme-colors, 'tomato');
+      }
+    }
+  }
+}

@@ -7,7 +7,12 @@
 
 <body>
   <main role="main" class="main-container">
-    <%- include('./' + file + '.ejs') %>
+    <%- include('./' + file + '.ejs', {
+      mapAssetLabel: {
+        dev: true,
+        status: null
+      }
+    }) %>
   </main>
 </body>
 </html>
