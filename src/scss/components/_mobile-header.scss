@@ -1,4 +1,4 @@
-$assetSelectedHeight: 150px;
+$searchingAssetsHeight: 999999999px;
 $mobileHeaderZindex: 1000;
 
 .mobile-header {
@@ -19,21 +19,37 @@ $mobileHeaderZindex: 1000;
     }
   }
 
-  .asset-information {
+  .asset-information-list {
+    border-top: 1px solid map-get($theme-colors, 'slate-20');
     transition: max-height 0.4s;
     max-height: 0;
     overflow: hidden;
 
-    .btn-navigate {
-      background: 0;
-      border: 0;
-      border-left: 1px solid map-get($theme-colors, 'scarlet');
+    &-item {
+      border-bottom: 1px solid map-get($theme-colors, 'slate-20');
+      .btn-navigate {
+        background: 0;
+        border: 0;
+      }
+
+      &.warning {
+        .asset-information-list-item-status {
+          color: map-get($theme-colors, 'canary-yellow');
+        }
+      }
+
+      &.danger {
+        .asset-information-list-item-status, .asset-information-content {
+          animation: danger-glow-color 2000ms infinite;
+          color: map-get($theme-colors, 'tomato');
+        }
+      }
     }
   }
 
-  &.asset-selected {
-    .asset-information {
-      max-height: $assetSelectedHeight;
+  &.searching {
+    .asset-information-list {
+      max-height: $searchingAssetsHeight;
     }
   }
 }

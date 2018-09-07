@@ -3,18 +3,6 @@ $mapAssetLabelPointerSize: 15px;
 $mapAssetLabelPointerZindex: 2000;
 $mapAssetLabelProgressZindex: 2010;
 
-@keyframes glowing {
-  0% {
-    background-color: map-get($theme-colors, 'tomato');
-  }
-  50% {
-    background-color: darken(map-get($theme-colors, 'tomato'), 20%);
-  }
-  100% {
-    background-color: map-get($theme-colors, 'tomato');
-  }
-}
-
 .map-asset-label {
   position: relative;
   background-color: map-get($theme-colors, 'slate');
@@ -70,8 +58,7 @@ $mapAssetLabelProgressZindex: 2010;
       border: 1px solid map-get($theme-colors, 'tomato');
       background-color: map-get($theme-colors, 'white');
       .progress-bar {
-        animation: glowing 2000ms infinite;
-        background-color: map-get($theme-colors, 'tomato');
+        animation: danger-glow-background 2000ms infinite;
       }
     }
   }

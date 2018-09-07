@@ -1,0 +1,30 @@
+$mobileFooterZindex: 1010;
+$mobileFooterButtonWidth: 110px;
+$mobileFooterHeight: 80px;
+
+.mobile-footer {
+  box-shadow: 1px 1px 10px map-get($theme-colors, 'slate-50');
+  z-index: $mobileFooterZindex;
+  background-color: map-get($theme-colors, 'white');
+  position: fixed;
+  height: $mobileFooterHeight;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  &-inner {
+    height: 100%;
+    width: calc(#{$mobileFooterButtonWidth} * 2);
+  }
+
+  button {
+    width: $mobileFooterButtonWidth;
+    background: none;
+    border: 0;
+
+    &.selected {
+      background-color: map-get($theme-colors, 'scarlet');
+      color: map-get($theme-colors, 'white');
+    }
+  }
+}

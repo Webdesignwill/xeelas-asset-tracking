@@ -1,20 +1,52 @@
-<div class="mobile-header asset-selected">
+<div class="mobile-header searching">
   <nav class="navbar justify-content-start py-3">
     <i class="material-icons color-scarlet bar_chart mr-3 font-size-lg">bar_chart</i>
     <input type="text" class="p-3 pr-5 flex-1 font-size-sm header-search" placeholder="Search assets ..." />
     <i class="material-icons color-scarlet search font-size-md">search</i>
   </nav>
 
-  <div class="asset-information">
-    <div class="px-3 py-2 d-flex justify-content-between">
-      <div class="d-flex align-items-center">
-        <i class="material-icons mr-3">error_outline</i>
-        <div class="d-flex flex-column text-uppercase asset-information-content pr-4">
-          <p class="mb-0 font-size-sm font-weight-bold">HAG-0231</p>
-          <p class="mb-0 font-size-xs">ketelweg 2, APELDOORN</p>
+  <ul class="asset-information-list list-unstyled mb-0">
+    <li class="asset-information-list-item">
+      <div class="px-3 d-flex justify-content-between">
+        <div class="py-3 d-flex align-items-center">
+          <i class="material-icons mr-3 asset-information-list-item-status">error_outline</i>
+          <div class="d-flex flex-column text-uppercase asset-information-content pr-4">
+            <p class="mb-0 font-size-sm font-weight-bold">HAG-0231</p>
+            <p class="mb-0 font-size-xs">ketelweg 2, APELDOORN</p>
+          </div>
         </div>
+        <button class="btn-navigate text-uppercase justify-self-end pl-4 font-size-sm color-scarlet">
+          <i class="material-icons">navigate_next</i>
+        </button>
       </div>
-      <button class="btn-navigate text-uppercase justify-self-end pl-4 font-size-sm color-scarlet">go</button>
-    </div>
-  </div>
+    </li>
+    <li class="asset-information-list-item warning">
+      <div class="px-3 d-flex justify-content-between">
+        <div class="d-flex py-3 align-items-center">
+          <i class="material-icons mr-3 asset-information-list-item-status">error_outline</i>
+          <div class="d-flex flex-column text-uppercase asset-information-content pr-4">
+            <p class="mb-0 font-size-sm font-weight-bold">HAG-0231</p>
+            <p class="mb-0 font-size-xs">ketelweg 2, APELDOORN</p>
+          </div>
+        </div>
+        <button class="btn-navigate text-uppercase justify-self-end pl-4 font-size-sm color-scarlet">
+          <i class="material-icons">navigate_next</i>
+        </button>
+      </div>
+    </li>
+    <li class="asset-information-list-item danger">
+      <div class="px-3 d-flex justify-content-between">
+        <div class="d-flex py-3 align-items-center">
+          <i class="material-icons mr-3 asset-information-list-item-status">error_outline</i>
+          <div class="d-flex flex-column text-uppercase asset-information-content pr-4">
+            <p class="mb-0 font-size-sm font-weight-bold">HAG-0231</p>
+            <p class="mb-0 font-size-xs">ketelweg 2, APELDOORN</p>
+          </div>
+        </div>
+        <button class="btn-navigate text-uppercase justify-self-end pl-4 font-size-sm color-scarlet">
+          <i class="material-icons">navigate_next</i>
+        </button>
+      </div>
+    </li>
+  </ul>
 </div>
