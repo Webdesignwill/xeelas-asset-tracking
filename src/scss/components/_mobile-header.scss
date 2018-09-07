@@ -1,0 +1,39 @@
+$assetSelectedHeight: 150px;
+$mobileHeaderZindex: 1000;
+
+.mobile-header {
+  z-index: $mobileHeaderZindex;
+  position: relative;
+  box-shadow: 1px 1px 10px map-get($theme-colors, 'slate-50');
+  background-color: map-get($theme-colors, 'white');
+  line-height: 1.7rem;
+
+  .navbar {
+    .bar_chart {
+      transform: rotate(90deg);
+    }
+
+    .search {
+      position: absolute;
+      right: 30px;
+    }
+  }
+
+  .asset-information {
+    transition: max-height 0.4s;
+    max-height: 0;
+    overflow: hidden;
+
+    .btn-navigate {
+      background: 0;
+      border: 0;
+      border-left: 1px solid map-get($theme-colors, 'scarlet');
+    }
+  }
+
+  &.asset-selected {
+    .asset-information {
+      max-height: $assetSelectedHeight;
+    }
+  }
+}

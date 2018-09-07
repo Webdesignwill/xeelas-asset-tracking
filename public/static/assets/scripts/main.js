@@ -3,10 +3,12 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('asset-map'), {
     center: {
-      lat: -34.397,
-      lng: 150.644
+      lat: 5.1214,
+      lng: -52.0907
     },
-    zoom: 8
+    zoom: 8,
+    zoomControl: false,
+    streetViewControl: false
   });
 }
 
