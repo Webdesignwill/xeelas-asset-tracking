@@ -1,14 +1,16 @@
+html, body {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
   font-family: $sans;
 
   .main-container {
+    z-index: 1;
+    height: 100%;
     transition: left $transition-speed;
     left: 0;
     position: relative;
   }
-}
-
-.bar_chart {
-  transform: rotate(90deg);
 }
