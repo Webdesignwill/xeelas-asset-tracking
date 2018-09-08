@@ -12,5 +12,16 @@ function initMap() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const searchCloseToggle = document.querySelector("[data-toggle-icon='search-close']")
+  const headerSearch = document.querySelector("[data-component='header-search']")
+  if(searchCloseToggle && headerSearch) {
+    headerSearch.addEventListener('keyup', (event) => {
+      searchCloseToggle.innerHTML = event.target.value.length > 0 ? 'close' : 'search'
+    })
 
+    searchCloseToggle.addEventListener('click', () => {
+      headerSearch.value = ''
+      searchCloseToggle.innerHTML = 'search'
+    })
+  }
 }, false)
