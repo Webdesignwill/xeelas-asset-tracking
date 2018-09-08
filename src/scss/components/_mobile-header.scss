@@ -20,13 +20,11 @@ $mobileHeaderZindex: 1000;
   }
 
   .asset-information-list {
-    border-top: 1px solid map-get($theme-colors, 'slate-20');
     transition: max-height 0.4s;
     max-height: 0;
     overflow: hidden;
 
     &-item {
-      border-bottom: 1px solid map-get($theme-colors, 'slate-20');
       .btn-navigate {
         background: 0;
         border: 0;

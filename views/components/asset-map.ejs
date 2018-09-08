@@ -1,1 +1,6 @@
-<div id="asset-map" class="asset-map position-absolute"></div>
+<div class="asset-map-container">
+  <% if(overlay.open) { %>
+    <div class="asset-map-overlay"></div>
+  <% } %>
+  <div id="asset-map" class="asset-map-object position-absolute"></div>
+</div>

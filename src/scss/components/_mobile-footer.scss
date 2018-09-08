@@ -2,6 +2,9 @@ $mobileFooterZindex: 1010;
 $mobileFooterButtonWidth: 110px;
 $mobileFooterHeight: 80px;
 
+$mobileFooterButtonPointerSize: 16px;
+$mobileFooterButtonPointerZindex: 1020;
+
 .mobile-footer {
   box-shadow: 1px 1px 10px map-get($theme-colors, 'slate-50');
   z-index: $mobileFooterZindex;
@@ -12,12 +15,22 @@ $mobileFooterHeight: 80px;
   right: 0;
   left: 0;
 
+  &.selected {
+    border-top: 1px solid map-get($theme-colors, 'scarlet');
+  }
+
   &-inner {
     height: 100%;
     width: calc(#{$mobileFooterButtonWidth} * 2);
   }
 
+  &-details {
+    background-color: map-get($theme-colors, 'white');
+    bottom: $mobileFooterHeight;
+  }
+
   button {
+    position: relative;
     width: $mobileFooterButtonWidth;
     background: none;
     border: 0;
@@ -25,6 +38,18 @@ $mobileFooterHeight: 80px;
     &.selected {
       background-color: map-get($theme-colors, 'scarlet');
       color: map-get($theme-colors, 'white');
+
+      &:before {
+        z-index: $mobileFooterButtonPointerZindex;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        position: absolute;
+        content: "";
+        background-color: map-get($theme-colors, 'scarlet');
+        top: calc(-#{$mobileFooterButtonPointerSize} / 2);
+        width: $mobileFooterButtonPointerSize;
+        height: $mobileFooterButtonPointerSize;
+      }
     }
   }
 }

@@ -1,17 +1,17 @@
 <body>
   <%- include('../components/mobile-header.ejs', {
     searchResults: {
-      open: true
+      open: false
     }
   }) %>
   <%- include('../components/mobile-footer.ejs', {
     footer: {
-      selected: false
+      selected: true
     }
   }) %>
   <%- include('../components/asset-map.ejs', {
     overlay: {
-      open: false
+      open: true
     }
   }) %>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLe4pQbV04BMU3i8bOx3MYKek9O2gmz0&callback=initMap" async defer></script>
