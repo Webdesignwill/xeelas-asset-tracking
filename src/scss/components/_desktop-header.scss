@@ -1,0 +1,41 @@
+$desktopHeaderHeight: 60px;
+
+.desktop-header {
+  height: $desktopHeaderHeight;
+
+  .header-profile {
+    height: $desktopHeaderHeight;
+
+    a {
+      color: map-get($theme-colors, 'black');
+      &:hover {
+        color: map-get($theme-colors, 'scarlet');
+      }
+    }
+  }
+
+  .nav-list {
+    a {
+      transition: background-color $transition-speed;
+      color: map-get($theme-colors, 'slate-50');
+      height: $desktopHeaderHeight;
+      border-bottom: 3px solid map-get($theme-colors, 'white');
+
+      &:hover, &:focus {
+        background-color: map-get($theme-colors, 'scarlet');
+        color: map-get($theme-colors, 'white');
+        border-bottom: 3px solid map-get($theme-colors, 'canary-yellow');
+      }
+    }
+
+    li {
+      &.active {
+        a {
+          color: map-get($theme-colors, 'white');
+          background-color: map-get($theme-colors, 'scarlet');
+          border-bottom: 3px solid map-get($theme-colors, 'canary-yellow');
+        }
+      }
+    }
+  }
+}

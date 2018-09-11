@@ -30,12 +30,19 @@ $mobileFooterButtonPointerZindex: 1020;
   }
 
   button {
+    cursor: pointer;
+    transition: background-color $transition-speed;
     position: relative;
     width: $mobileFooterButtonWidth;
     background: none;
     border: 0;
 
-    &.selected {
+    &:hover, &:focus {
+      background-color: map-get($theme-colors, 'scarlet');
+      color: map-get($theme-colors, 'white');
+    }
+
+    &.active {
       background-color: map-get($theme-colors, 'scarlet');
       color: map-get($theme-colors, 'white');
 

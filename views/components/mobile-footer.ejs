@@ -1,18 +1,18 @@
-<% const selectedClassName = footer.selected ? 'selected' : '' %>
+<% const activeClassName = footer.active ? 'active' : '' %>
 
-<footer class="mobile-footer <%= selectedClassName %>">
+<footer class="mobile-footer <%= activeClassName %>">
   <div class="mx-auto d-flex flex-row mobile-footer-inner">
     <button class="p-0 d-flex flex-column align-items-center justify-content-center">
       <i class="material-icons font-size-md">bar_chart</i>
       <span class="text-uppercase">stats</span>
     </button>
-    <button class="<%= selectedClassName %>  p-0 d-flex flex-column align-items-center justify-content-center">
+    <button class="<%= activeClassName %>  p-0 d-flex flex-column align-items-center justify-content-center">
       <i class="material-icons font-size-md">local_phone</i>
       <span class="text-uppercase">call</span>
     </button>
   </div>
 
-  <% if(footer.selected) { %>
+  <% if(footer.active) { %>
     <div class="pt-1 mobile-footer-details w-100 position-absolute">
       <div class="inner-shadow p-3">
         <div class="d-flex flex-column justify-content-between">
