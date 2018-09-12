@@ -1,0 +1,25 @@
+.asset-cards {
+  &-card {
+    border: 3px solid map-get($theme-colors, 'white');
+    width: 100%;
+    cursor: pointer;
+
+    &.primary {
+      &:hover, &:focus {
+        border-color: map-get($theme-colors, 'scarlet');
+      }
+    }
+
+    &.warning {
+      &:hover, &:focus {
+        border-color: map-get($theme-colors, 'canary-yellow');
+      }
+    }
+
+    &.success {
+      &:hover, &:focus {
+        border-color: map-get($theme-colors, 'apple-green');
+      }
+    }
+  }
+}

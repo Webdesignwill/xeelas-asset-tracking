@@ -1,0 +1,19 @@
+.badge {
+
+  &-mini {
+    border-radius: $border-radius;
+    width: 10px;
+    height: 10px;
+  }
+
+  &-primary {
+    background-color: map-get($theme-colors, 'scarlet');
+  }
+  &-success {
+    background-color: map-get($theme-colors, 'apple-green');
+  }
+  &-warning {
+    color: map-get($theme-colors, 'white');
+    background-color: map-get($theme-colors, 'squash');
+  }
+}

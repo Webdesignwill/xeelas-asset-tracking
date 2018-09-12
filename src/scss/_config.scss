@@ -36,6 +36,7 @@ $header-font-size-map: (
 
 $color-black: rgb(0,0,0) !default; // #000000
 $color-white: rgb(255,255,255) !default; // #FFFFFF
+$color-off-white: rgb(247,247,247) !default; // #F7F7F7
 $color-scarlet: rgb(208,1,27) !default; // #d0011b
 $color-tomato: rgb(242,76,58) !default; // #f24c3a
 $color-squash: rgb(245,166,35) !default; // #f5a623
@@ -52,12 +53,15 @@ $color-dark-grey: rgb(49,59,74) !default; // #313b4a
 $color-dark-grey-blue: rgb(50,68,94) !default; // #32445e
 
 $transition-speed: .2s;
-$sidebar-width: 230px;
-$sidebar-width-offset: #{$sidebar-width};
+$sidebar-active-width: 300px;
+$assetSummaryWidth: 350px;
+$desktopHeaderHeight: 60px;
+$sidebar-width-offset: #{$sidebar-active-width};
 
 $theme-colors: (
   "black": $color-black,
   "white": $color-white,
+  "off-white": $color-off-white,
   "scarlet": $color-scarlet,
   "tomato": $color-tomato,
   "squash": $color-squash,
@@ -83,10 +87,9 @@ $grid-breakpoints: (
   xl: 1366px
 );
 
-$navbar-collapse-zindex: 1000;
-$navbar-container-zindex: 1010;
-$site-search-zindex: 1020;
-
+$assetSummaryZindex: 1000;
+$sidebarZindex: 1020;
+$desktopHeaderZindex: 1030;
 $border-radius: 5px;
 
 @keyframes danger-glow-background {

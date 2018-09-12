@@ -1,0 +1,33 @@
+<div class="sidebar-list-component mb-5" data-component="sidebar-list-component">
+  <p class="text-uppercase color-slate-50 mb-2 px-3"><%= sidebarListComponent.title %></p>
+  <ul class="list-unstyled sidebar-list-component-list color-slate">
+
+    <% for(let i=0; i < sidebarListComponent.items.length; i++) { %>
+      <li class="sidebar-list-component-list-item m-0" data-component="sidebar-list-component-item">
+        <p class="px-3 py-2 item-selector d-flex align-items-center justify-content-between mb-0">
+          <%= sidebarListComponent.items[i].title %> <i class="material-icons sidebar-item-open">keyboard_arrow_down</i>
+          <i class="material-icons sidebar-item-close">keyboard_arrow_up</i>
+        </p>
+        <div class="sidebar-list-component-item-detail">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="d-block px-4 py-2">46373
+                <span class="badge badge-pill badge-primary ml-5">10%</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="d-block px-4 py-2">46373
+                <span class="badge badge-pill badge-success ml-5">10%</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="d-block px-4 py-2">46373
+                <span class="badge badge-pill badge-warning ml-5">10%</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    <% } %>
+  </ul>
+</div>

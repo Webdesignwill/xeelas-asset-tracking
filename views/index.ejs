@@ -7,13 +7,13 @@
 
 <body>
   <main role="main" class="d-flex flex-column flex-md-row justify-content-between p-5">
-    <div class="">
+    <div>
       <h3 class="pb-5">Pages</h3>
       <% for(let i=0; i < pages.length; i++) { %>
         <p><a href="<%= `/pages/${pages[i]}` %>"><%= pages[i] %></a></p>
       <% } %>
     </div>
-    <div class="">
+    <div>
       <h3 class="pb-5">Components</h3>
       <% for(let i=0; i < components.length; i++) { %>
         <p><a href="<%= `/components/${components[i]}` %>"><%= components[i] %></a></p>

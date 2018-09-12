@@ -1,0 +1,22 @@
+<body>
+  <%- include('../components/desktop-header.ejs', {
+    searchResults: {
+      open: false
+    }
+  }) %>
+  <%- include('../components/sidebar.ejs', {
+    sidebar: {
+      development: false
+    }
+  }) %>
+  <%- include('../components/assets-summary-view.ejs', {
+  }) %>
+  <main role="main" class="main-container p-3">
+    <%- include('../components/asset-map.ejs', {
+      overlay: {
+        open: false
+      }
+    }) %>
+  </main>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLe4pQbV04BMU3i8bOx3MYKek9O2gmz0&callback=initMap" async defer></script>
+</body>

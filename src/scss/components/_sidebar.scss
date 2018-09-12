@@ -1,46 +1,33 @@
 
 .sidebar {
+  background-color: map-get($theme-colors, 'white');
   transition: left $transition-speed;
-  background-color: map-get($theme-colors, 'black');
-
   position: fixed;
-  top: 0;
+  top: $desktopHeaderHeight;
   bottom: 0;
-  min-width: $sidebar-width;
-  max-width: $sidebar-width;
-  left: -$sidebar-width;
+  box-shadow: 0px 5px 10px map-get($theme-colors, 'slate');
+  padding-top: $spacing-3 $spacing-2 0 0;
+  left: -$sidebar-active-width;
+  width: $sidebar-active-width;
+  z-index: $sidebarZindex;
+
+  .scroll-wrapper {
+    overflow: scroll;
+  }
+
+  .sidebar-search-select {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .dropdown-menu {
+    top: 12px !important;
+    left: 4px !important;
+  }
 
   &.development {
     left: 0;
-  }
-
-  &-links {
-    a {
-      transition: text-indent $transition-speed;
-      text-indent: 0;
-      text-decoration: none;
-      &:hover {
-        text-indent: 10px;
-      }
-
-      &.active {
-        border-left: 4px solid map-get($theme-colors, 'white');
-        text-indent: 10px;
-      }
-    }
-  }
-
-  .toggle-sidebar {
-    transition: width $transition-speed;
-    width: 44px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: map-get($theme-colors, 'white');
-
-    &:focus {
-      outline: none;
-    }
   }
 }
 
