@@ -15,17 +15,6 @@
     overflow: scroll;
   }
 
-  .sidebar-search-select {
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .dropdown-menu {
-    top: 12px !important;
-    left: 4px !important;
-  }
-
   &.development {
     left: 0;
   }

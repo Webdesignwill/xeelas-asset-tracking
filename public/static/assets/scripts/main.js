@@ -6,6 +6,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var AssetCard = function AssetCard(assetCardElement) {
+  _classCallCheck(this, AssetCard);
+
+  var assetDetailView = document.querySelector("[data-component='assets-list-view']");
+
+  assetCardElement.addEventListener('click', function () {
+    assetDetailView.classList.toggle('active');
+  });
+
+  var closeAssetDetail = document.querySelector("[data-component='close-detail-view']").addEventListener('click', function () {
+    assetDetailView.classList.remove('active');
+  });
+};
+
 var SidebarListComponent = function SidebarListComponent(componentElement) {
   _classCallCheck(this, SidebarListComponent);
 
@@ -67,6 +81,13 @@ function initMap() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  var assetCards = document.querySelectorAll("[data-component='asset-card']");
+  if (assetCards.length) {
+    for (var i = 0; i < assetCards.length; i++) {
+      new AssetCard(assetCards[i]);
+    }
+  }
 
   if (document.querySelector('#sidebar')) {
     new SidebarNav(document.querySelector('#sidebar'));

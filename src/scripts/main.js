@@ -1,3 +1,18 @@
+class AssetCard {
+  constructor(assetCardElement) {
+
+    const assetDetailView = document.querySelector("[data-component='assets-list-view']")
+
+    assetCardElement.addEventListener('click', () => {
+      assetDetailView.classList.toggle('active')
+    })
+
+    const closeAssetDetail = document.querySelector("[data-component='close-detail-view']").addEventListener('click', () => {
+      assetDetailView.classList.remove('active')
+    })
+  }
+}
+
 class SidebarListComponent {
   constructor(componentElement) {
     const listItem = componentElement.querySelectorAll("[data-component='sidebar-list-component-item']")
@@ -50,6 +65,13 @@ function initMap() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const assetCards = document.querySelectorAll("[data-component='asset-card']")
+  if(assetCards.length) {
+    for(let i = 0; i<assetCards.length; i++) {
+      new AssetCard(assetCards[i])
+    }
+  }
 
   if(document.querySelector('#sidebar')) {
     new SidebarNav(document.querySelector('#sidebar'))

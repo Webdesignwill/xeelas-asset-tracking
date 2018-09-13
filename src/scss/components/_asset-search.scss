@@ -1,0 +1,20 @@
+$searchIndent: 15px;
+
+.asset-search {
+  height: 53px;
+
+  input {
+    border: 0;
+    border-bottom: 1px solid map-get($theme-colors, 'scarlet');
+    text-indent: calc(#{$searchIndent} + #{$spacing-3});
+  }
+
+  .material-icons {
+    left: $searchIndent;
+  }
+
+  .dropdown-menu {
+    top: 12px !important;
+    left: 4px !important;
+  }
+}
