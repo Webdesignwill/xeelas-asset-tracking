@@ -35,19 +35,19 @@
 
   &.danger {
     &:hover, &:focus {
-      border-color: map-get($theme-colors, 'scarlet');
+      border-color: map-get($theme-colors, 'danger');
     }
   }
 
   &.warning {
     &:hover, &:focus {
-      border-color: map-get($theme-colors, 'squash');
+      border-color: map-get($theme-colors, 'warning');
     }
   }
 
-  &.success {
+  &.ok {
     &:hover, &:focus {
-      border-color: map-get($theme-colors, 'apple-green');
+      border-color: map-get($theme-colors, 'ok');
     }
   }
 }
