@@ -5,7 +5,7 @@
 
     <div class="mb-0 d-flex justify-content-end dropdown pr-1">
       <a href="#" id="dropDownSortMenu" class="d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <span class="color-slate mr-1">Filter by |</span> Fuel Level
+        <span class="color-slate mr-1">Sort by |</span> Fuel Level
         <i class="material-icons">arrow_drop_down</i>
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropDownSortMenu">
@@ -20,35 +20,120 @@
   </div>
 
   <div class="assets-list-view-body">
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
-    <% include ./asset-card.ejs %>
+    <%- include('./asset-card.ejs', {
+      asset: {
+        name: 'KVA 125',
+        type: 'generator',
+        alert: {
+          level: 'danger',
+          message: 'Fuel'
+        },
+        unit: {
+          type: 'WKF344'
+        },
+        runninghrs: 9872,
+        auxiliary: null,
+        fuel: {
+          level: 50
+        }
+      }
+    }) %>
+    <%- include('./asset-card.ejs', {
+      asset: {
+        name: 'KVA 50',
+        type: 'generator',
+        alert: {
+          level: 'danger',
+          message: 'No Tank'
+        },
+        unit: {
+          type: 'SPO8722'
+        },
+        runninghrs: 44,
+        fuel: {
+          level: null
+        },
+        auxiliary: null
+      }
+    }) %>
+    <%- include('./asset-card.ejs', {
+      asset: {
+        name: 'KVA 35',
+        type: 'generator',
+        alert: {
+          level: 'warning',
+          message: 'Service'
+        },
+        unit: {
+          type: 'HAG222'
+        },
+        runninghrs: 750,
+        fuel: {
+          level: null
+        },
+        auxiliary: {
+          name: 'R837463',
+          fuel: {
+            level: 45
+          }
+        }
+      }
+    }) %>
+    <%- include('./asset-card.ejs', {
+      asset: {
+        name: 'KVA 125',
+        type: 'generator',
+        alert: {
+          level: 'ok',
+          message: 'Ok'
+        },
+        unit: {
+          type: 'WKF344'
+        },
+        runninghrs: 998,
+        auxiliary: null,
+        fuel: {
+          level: 85
+        }
+      }
+    }) %>
+    <%- include('./asset-card.ejs', {
+      asset: {
+        name: '2400 L',
+        type: 'fuel',
+        alert: {
+          level: 'ok',
+          message: 'Ok'
+        },
+        unit: {
+          type: '3432'
+        },
+        fuel: {
+          level: 85
+        },
+        generator: {
+          name: 'KVA 500'
+        }
+      }
+    }) %>
+    <%- include('./asset-card.ejs', {
+      asset: {
+        name: '1000 L',
+        type: 'fuel',
+        alert: {
+          level: 'ok',
+          message: 'Ok'
+        },
+        unit: {
+          type: '8227'
+        },
+        fuel: {
+          level: 66
+        },
+        generator: null
+      }
+    }) %>
   </div>
 
-  <div data-component="asset-detail-view" class="asset-detail-view">
-    <div class="asset-detail-view-header bg-color-scarlet d-flex justify-content-between align-items-center p-2">
-      <span class="color-white font-size-md">
-        R-10000
-      </span>
-      <i class="material-icons close-asset-detail color-white" data-component="close-detail-view">close</i>
-    </div>
-    <% include ./asset-card.ejs %>
-    <div class="contact-details px-3 py-4">
-      <p class="d-flex align-items-center">
-        <i class="material-icons mr-2">person</i>
-        W Falkowski
-      </p>
-      <p class="mb-0 font-weight-bold">Gemeente Arnhem</p>
-      <p class="mb-0 color-scarlet font-weight-bold">0611 574639</p>
-    </div>
-    <div class="other-details px-3 py-4">
-      <p class="mb-0 font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-    </div>
-  </div>
+  <% include ./asset-detail-view.ejs %>
 </div>

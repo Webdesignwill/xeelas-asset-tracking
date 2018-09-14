@@ -1,0 +1,74 @@
+<div data-component="asset-detail-view" class="asset-detail-view bg-color-warm-grey">
+  <div class="asset-detail-view-header bg-color-dark-grey-blue d-flex justify-content-between align-items-center p-2">
+    <i class="material-icons close-asset-detail color-white" data-component="close-detail-view">arrow_back</i>
+    <span class="color-white font-size-md">
+      R-10000
+    </span>
+  </div>
+  <%- include('./asset-card.ejs', {
+    asset: {
+      name: 'KVA 500',
+      type: 'generator',
+      alert: {
+        level: 'ok',
+        message: 'Ok'
+      },
+      unit: {
+        type: 'PVS'
+      },
+      runninghrs: 66,
+      fuel: {
+        level: null
+      },
+      auxiliary: {
+        name: '2400 L',
+        fuel: {
+          level: 80
+        }
+      }
+    }
+  }) %>
+  <div class="text-center d-flex flex-column align-content-center">
+    <i class="material-icons font-size-xs linked-item font-size-lg">compare_arrows</i>
+  </div>
+  <%- include('./asset-card.ejs', {
+    asset: {
+      name: '2400 L',
+      type: 'fuel',
+      alert: {
+        level: 'ok',
+        message: 'Ok'
+      },
+      unit: {
+        type: '3432'
+      },
+      fuel: {
+        level: 80
+      },
+      generator: {
+        name: 'KVA 500'
+      },
+      withindetail: true
+    }
+  }) %>
+  <div class="asset-detail px-3 pt-1 pb-2">
+    <div class="d-flex align-items-center input-icon-group position-relative">
+      <i class="material-icons font-size-xs mr-1 position-absolute color-scarlet">add</i>
+      <input type="text" placeholder="Add Auxiliary Tank" class="d-block w-100 input-field px-3 py-3 font-size-s" />
+    </div>
+    <p class="mb-1 mt-2">The auxiliary fuel level will be used instead of the generator fuel level when added</p>
+  </div>
+  <div class="asset-detail px-3 py-3">
+    <p class="d-flex align-items-center">
+      <i class="material-icons mr-2">person</i>
+      W Falkowski
+    </p>
+    <address>
+      <strong>Gemeente Arnhem</strong><br />
+      Address Line 1<br />
+      Address Line 2<br />
+      Postcode
+    </address>
+    <p class="mb-0 color-scarlet font-weight-bold">0611 574639</p>
+  </div>
+</div>

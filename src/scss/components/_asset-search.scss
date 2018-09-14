@@ -3,9 +3,8 @@ $searchIndent: 15px;
 .asset-search {
   height: 53px;
 
-  input {
-    border: 0;
-    border-bottom: 1px solid map-get($theme-colors, 'scarlet');
+  input[type="text"] {
+    border-bottom: 1px solid map-get($theme-colors, 'slate-20');
     text-indent: calc(#{$searchIndent} + #{$spacing-3});
   }
 

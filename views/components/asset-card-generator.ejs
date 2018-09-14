@@ -1,0 +1,46 @@
+<i class="material-icons asset-indicator-icon">power</i>
+<p class="d-flex justify-content-between text-uppercase color-slate-50 mb-0">
+  <span class="color-slate d-flex align-items-center mb-0">
+    <%= asset.unit.type %>
+  </span>
+  <span class="d-flex align-items-center color-<%= asset.alert.level %> text-uppercase">
+    <span class="badge-mini <%= asset.alert.level %> d-block mr-2"></span> <%= asset.alert.message %>
+  </span>
+</p>
+<p class="text-uppercase font-size-s mb-2 color-slate-50"><%= asset.name %></p>
+<p class="font-size-s d-flex justify-content-between mb-2">
+  <span class="color-slate">Running Hours</span>
+  <span><%= asset.runninghrs %> h</span>
+</p>
+<% if(asset.fuel.level !== null) { %>
+  <div class="progress">
+    <div class="progress-bar bg-color-<%= asset.alert.level %> d-flex align-items-center flex-row"
+      style="width: <%= asset.fuel.level %>%"
+      role="progressbar"
+      aria-valuenow="<%= asset.fuel.level %>"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ><i class="material-icons font-size-xs mr-1">local_gas_station</i></div>
+  </div>
+<% } else { %>
+  <% if(asset.auxiliary !== null) { %>
+    <div class="progress">
+      <div class="progress-bar bg-color-<%= asset.alert.level %> d-flex align-items-center flex-row"
+        style="width: <%= asset.auxiliary.fuel.level %>%"
+        role="progressbar"
+        aria-valuenow="<%= asset.auxiliary.fuel.level %>"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <i class="material-icons font-size-xs mr-1">power</i>
+        <i class="material-icons font-size-xs mr-1">arrow_forward</i>
+        <i class="material-icons font-size-xs mr-1">local_gas_station</i>
+      </div>
+    </div>
+  <% } else { %>
+    <p class="d-flex align-items-center mb-0 add-tank pt-2">
+      <i class="material-icons mr-2 color-scarlet font-size-xs pt-2 pb-2">add</i>
+      <span class="color-slate-50">Add auxiliary tank</span>
+    </p>
+  <% } %>
+<% } %>

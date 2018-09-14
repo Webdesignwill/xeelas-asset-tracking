@@ -1,0 +1,37 @@
+<i class="material-icons asset-indicator-icon">local_gas_station</i>
+<% if(asset.withindetail) { %>
+  <div class="d-flex justify-content-between align-items-center">
+    <p class="text-uppercase font-size-md mb-0 color-slate"><%= asset.unit.type %></p>
+    <i class="material-icons font-size-md color-scarlet">link_off</i>
+  </div>
+<% } else { %>
+  <p class="d-flex justify-content-between text-uppercase color-slate mb-0">
+    <span class="d-flex align-items-center mb-0">
+      <%= asset.unit.type %>
+    </span>
+    <span class="d-flex align-items-center color-<%= asset.alert.level %> text-uppercase">
+      <span class="badge-mini <%= asset.alert.level %> d-block mr-2"></span> <%= asset.alert.message %>
+    </span>
+  </p>
+  <p class="text-uppercase font-size-s mb-2 color-slate-50"><%= asset.name %></p>
+<% } %>
+
+<% if(!asset.withindetail) { %>
+  <div class="progress mt-auto">
+    <div class="progress-bar bg-color-<%= asset.alert.level %> d-flex align-items-center flex-row"
+      style="width: <%= asset.fuel.level %>%"
+      role="progressbar"
+      aria-valuenow="<%= asset.fuel.level %>"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      <% if(asset.generator !== null) { %>
+        <i class="material-icons font-size-xs mr-1">power</i>
+        <i class="material-icons font-size-xs mr-1">arrow_back</i>
+        <i class="material-icons font-size-xs mr-1">local_gas_station</i>
+      <% } else { %>
+        <i class="material-icons font-size-xs mr-1">local_gas_station</i>
+      <% } %>
+    </div>
+  </div>
+<% } %>

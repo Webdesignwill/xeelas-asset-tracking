@@ -11,6 +11,17 @@ $assetsListViewHeaderHeight: 108px;
   width: $assetSummaryWidth;
   background-color: map-get($theme-colors, 'white');
 
+  .linked-item {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    z-index: 999999;
+    color: map-get($theme-colors, 'white');
+    background-color: map-get($theme-colors, 'dark-grey-blue');
+    padding: 5px;
+    border-radius: 50%;
+  }
+
   &.active {
     .asset-detail-view {
       box-shadow: 0px 0px 5px map-get($theme-colors, 'slate-50');
@@ -25,6 +36,7 @@ $assetsListViewHeaderHeight: 108px;
   }
 
   &-header {
+    z-index: $assetListViewHeaderZindex;
     position: absolute;
     box-shadow: 0px 0px 5px map-get($theme-colors, 'slate-50');
     background-color: map-get($theme-colors, 'white');
@@ -35,22 +47,21 @@ $assetsListViewHeaderHeight: 108px;
   }
 
   .asset-detail-view {
+    z-index: $assetDetailViewZindex;
     transition: left $transition-speed;
     position: absolute;
     background-color: map-get($theme-colors, 'white');
     width: $assetSummaryWidth;
     left: -$assetSummaryWidth;
     top: 0;
-    bottom: 0;
+    bottom: -$assetsListViewHeaderHeight;
 
-    .contact-details {
+    .asset-detail {
+      background-color: map-get($theme-colors, 'white');
       border-top: 1px solid map-get($theme-colors, 'slate-20');
-      border-bottom: 1px solid map-get($theme-colors, 'slate-20');
-    }
-
-    .other-details {
-      border-top: 0;
-      border-bottom: 1px solid map-get($theme-colors, 'slate-20');
+      &:last-child {
+        border-bottom: 1px solid map-get($theme-colors, 'slate-20');
+      }
     }
 
     &-header {

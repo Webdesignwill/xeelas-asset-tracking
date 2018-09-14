@@ -46,6 +46,8 @@ $color-canary-yellow: rgb(254,231,64) !default; // #fee740
 $color-warm-grey: rgb(155,155,155) !default; // #9b9b9b
 $color-cool-grey: rgb(140,151,164) !default; // #8c97a4
 $color-slate: rgb(72,84,101) !default; // #485465
+$color-slate-5: rgba(72,84,101,.05) !default; // #485465
+$color-slate-10: rgba(72,84,101,.1) !default; // #485465
 $color-slate-20: rgba(72,84,101,.2) !default; // #485465
 $color-slate-50: rgba(72,84,101,.5) !default; // #485465
 $color-cloudy-blue: rgb(187,201,221) !default; // #bbc9dd
@@ -53,6 +55,7 @@ $color-dark-grey: rgb(49,59,74) !default; // #313b4a
 $color-dark-grey-blue: rgb(50,68,94) !default; // #32445e
 
 $transition-speed: .2s;
+$progressBarHeight: 1.8rem;
 $sidebar-active-width: 300px;
 $assetSummaryWidth: 350px;
 $assetSearchHeight: 53px;
@@ -60,6 +63,9 @@ $desktopHeaderHeight: 60px;
 $sidebar-width-offset: #{$sidebar-active-width};
 
 $theme-colors: (
+  "danger": $color-scarlet,
+  "warning": $color-squash,
+  "ok": $color-apple-green,
   "black": $color-black,
   "white": $color-white,
   "off-white": $color-off-white,
@@ -72,6 +78,8 @@ $theme-colors: (
   "warm-grey": $color-warm-grey,
   "cool-grey": $color-cool-grey,
   "slate": $color-slate,
+  "slate-5": $color-slate-5,
+  "slate-10": $color-slate-10,
   "slate-20": $color-slate-20,
   "slate-50": $color-slate-50,
   "cloudy-blue": $color-cloudy-blue,
@@ -89,8 +97,10 @@ $grid-breakpoints: (
 );
 
 $assetSummaryZindex: 1000;
-$sidebarZindex: 1020;
-$desktopHeaderZindex: 1030;
+$assetListViewHeaderZindex: calc(#{$assetSummaryZindex} + 10);
+$assetDetailViewZindex: calc(#{$assetListViewHeaderZindex} + 10);
+$sidebarZindex: calc(#{$assetDetailViewZindex} + 10);
+$desktopHeaderZindex: calc(#{$sidebarZindex} + 10);
 $border-radius: 5px;
 
 @keyframes danger-glow-background {

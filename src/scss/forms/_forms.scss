@@ -4,6 +4,7 @@ input[type="search"],
 input[type="password"] {
   transition: border-color $transition-speed;
   line-height: normal;
+  border: 0;
 
   &:focus {
     outline: none;
@@ -18,5 +19,12 @@ input[type="password"] {
     &::placeholder {
       opacity: 0;
     }
+  }
+}
+
+.input-icon-group {
+  .input-field {
+    border-bottom: 1px solid map-get($theme-colors, 'slate-20');
+    text-indent: $spacing-2;
   }
 }
