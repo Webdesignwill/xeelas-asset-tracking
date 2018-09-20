@@ -1,0 +1,20 @@
+<body>
+  <%- include('../components/desktop-header.ejs', {
+    searchResults: {
+      open: false
+    }
+  }) %>
+  <main role="main" class="d-flex align-items-center p-3 h-100 bg-color-dark-grey">
+    <form class="login-form-container p-5 d-flex flex-column">
+      <div class="form-group mb-3">
+        <label for="email-address" class="font-size-sm">Email address</label>
+        <input type="email" placeholder="Email address ..." class="d-block w-100 input-field px-3 py-3 font-size-s" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="password" class="font-size-sm">Password</label>
+        <input type="password" placeholder="Password ..." class="d-block w-100 input-field px-3 py-3 font-size-s" />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </main>
+</body>
